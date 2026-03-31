@@ -25,6 +25,25 @@ Hosted via GitHub Pages.
 3. Choose the branch `main` (or `master`) and set the folder to `/ (root)`.
 4. Click **Save**. The site will be available at `https://maxfroehlich1410.github.io/BabyTracking-site/`.
 
+### Fastest deployment path
+
+This repository now includes a root `.nojekyll` file so GitHub Pages can publish the static files directly from `main` without trying to run a Jekyll build.
+
+To make the site live as fast as possible:
+
+1. Open `https://github.com/MaxFroehlich1410/BabyTracking-site/settings/pages`
+2. Under **Build and deployment**, choose `Deploy from a branch`
+3. Select branch `main`
+4. Select folder `/(root)`
+5. Click **Save**
+6. Wait for the first Pages deployment to finish
+
+Expected live URLs:
+
+- `https://maxfroehlich1410.github.io/BabyTracking-site/`
+- `https://maxfroehlich1410.github.io/BabyTracking-site/datenschutz/`
+- `https://maxfroehlich1410.github.io/BabyTracking-site/nutzungsrichtlinien/`
+
 ### URL structure on GitHub Pages
 
 If this repository is published as a normal project site, the public base URL will be:
