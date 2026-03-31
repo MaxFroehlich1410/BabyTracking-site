@@ -83,7 +83,7 @@ Im **lokalen Modus** werden diese Daten ausschließlich auf dem Endgerät des Nu
 
 ### 4.4 Momente (Fotos)
 
-Nutzer können Fotos mit Titeln und Zeitstempeln als „Momente" speichern. Diese Bilddaten werden **ausschließlich lokal auf dem Endgerät** gespeichert und **nicht** an unsere Server übermittelt.
+Nutzer können Fotos mit Titeln und Zeitstempeln als „Momente" speichern. Im **lokalen Modus** werden diese Bilddaten ausschließlich auf dem Endgerät gespeichert. Bei **registrierten Nutzern** werden Fotos, Titel und Zeitstempel zusätzlich mit unserem Cloud-Dienst synchronisiert und auf unseren Servern gespeichert.
 
 Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch aktive Nutzung).
 
@@ -120,6 +120,7 @@ Verarbeitete Daten bei Supabase:
 - Kontodaten (E-Mail, verschlüsseltes Passwort, Profildaten)
 - Haushaltsdaten und Mitgliedschaften
 - Tracking-Daten (Fütterung, Schlaf, Wickeln, benutzerdefinierte Einträge)
+- Momente-Daten (Fotos, Titel, Zeitstempel)
 
 Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung); Art. 28 DSGVO (Auftragsverarbeitung).
 
@@ -198,7 +199,8 @@ Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ih
 | Haushaltsdaten | Bis zur Löschung des Haushalts oder Kontos |
 | Tracking-Daten (Cloud) | Bis zur Löschung durch den Nutzer oder bei Kontolöschung (Soft-Delete, anschließend endgültige Löschung) |
 | Tracking-Daten (lokal) | Bis zur Deinstallation der App oder manuellen Löschung |
-| Momente (Fotos) | Nur lokal; Löschung bei Deinstallation der App oder manueller Löschung |
+| Momente (Fotos, Cloud) | Bis zur Löschung durch den Nutzer oder bei Kontolöschung |
+| Momente (Fotos, lokal) | Bis zur Deinstallation der App oder manueller Löschung |
 | Lokale Einstellungen | Bis zur Deinstallation der App |
 
 Bei **Kontolöschung** wird über eine serverseitige Funktion (`delete_own_account`) das Profil und alle zugehörigen Daten auf unseren Servern gelöscht.
