@@ -1,261 +1,151 @@
 # Datenschutzerklärung
 
-**BabyTrack – Baby-Tracking-App**
-Stand: 30. März 2026
+**BabyTrack – Baby-Tracking-App**<br>
+**Dokumentversion und Stand: 12. September 2026**
 
 ---
 
 ## 1. Verantwortlicher
 
-Maximilian Fröhlich
-Schönhauser Allee 99
-10439 Berlin
-Deutschland
+Maximilian Fröhlich, c/o Melissi, Schönhauser Allee 99, 10439 Berlin, Deutschland<br>
+E-Mail: [maxfroehlich@gmx.net](mailto:maxfroehlich@gmx.net)<br>
+Website: [BabyTrack Legal & Support](https://maxfroehlich1410.github.io/BabyTracking-site/)
 
-E-Mail: maxfroehlich@gmx.net
-Website: https://maxfroehlich1410.github.io/BabyTracking-site/
+## 2. Für wen diese Erklärung gilt
 
-(nachfolgend „wir", „uns" oder „Anbieter")
+Diese Erklärung beschreibt die Verarbeitung personenbezogener Daten in der iOS-/iPadOS-App „BabyTrack“ und auf der zugehörigen Website. Die App richtet sich an volljährige Eltern und andere Erziehungs- oder Sorgeberechtigte. Sie ist nicht zur eigenständigen Nutzung durch Kinder bestimmt.
 
----
+Die App verarbeitet bewusst Daten über das betreute Kind, wenn eine berechtigte erwachsene Person diese eingibt. Dazu können Gesundheitsdaten im Sinne von Art. 9 DSGVO gehören. Wer Daten eines Kindes oder anderer Personen eingibt oder mit einem Haushalt teilt, bestätigt, hierzu berechtigt zu sein.
 
-## 2. Überblick über die Datenverarbeitung
+## 3. Lokaler Modus und Cloud-Modus
 
-Diese Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten wir bei der Nutzung der App „BabyTrack" (nachfolgend „App") sowie der zugehörigen Website https://maxfroehlich1410.github.io/BabyTracking-site/ (nachfolgend „Website") erheben, verarbeiten und nutzen.
+BabyTrack kann ohne Konto im **lokalen Modus** oder nach Registrierung im **Cloud-Modus** verwendet werden.
 
-Die Verarbeitung personenbezogener Daten erfolgt stets im Einklang mit der Datenschutz-Grundverordnung (DSGVO), dem Bundesdatenschutzgesetz (BDSG) und dem Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz (TDDDG).
+- Im lokalen Modus bleiben Pflegeeinträge, Namen, Einstellungen und Moment-Fotos grundsätzlich im App-Speicher des Geräts. Es findet keine Synchronisierung dieser Inhalte mit unserer Datenbank statt.
+- Im Cloud-Modus werden die in Abschnitt 5 genannten Konto-, Haushalts-, Pflege- und Moment-Daten über Supabase gespeichert und zwischen berechtigten Haushaltsmitgliedern synchronisiert.
+- RevenueCat wird zur Anzeige und Verwaltung von Kaufangeboten und Kaufberechtigungen bereits beim App-Start eingesetzt. Die in Abschnitt 8 beschriebenen technischen und kaufbezogenen Daten können deshalb auch im lokalen Modus verarbeitet werden.
 
----
+## 4. Rechtsgrundlagen
 
-## 3. Rechtsgrundlagen der Verarbeitung
+Wir verarbeiten Daten insbesondere auf folgenden Grundlagen:
 
-Wir verarbeiten personenbezogene Daten auf Basis folgender Rechtsgrundlagen:
+- Art. 6 Abs. 1 lit. b DSGVO für Registrierung, Kontoführung, Synchronisierung und Bereitstellung gekaufter Funktionen;
+- Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO für die freiwillige Cloud-Verarbeitung eingegebener Pflege- und Gesundheitsdaten sowie von Moment-Fotos;
+- Art. 6 Abs. 1 lit. f DSGVO für IT-Sicherheit, Missbrauchsabwehr, Fehleranalyse und die technisch erforderliche Verwaltung von Kaufberechtigungen; unser Interesse besteht in einem sicheren und funktionsfähigen Dienst;
+- Art. 6 Abs. 1 lit. c DSGVO, soweit gesetzliche Aufbewahrungs-, Nachweis- oder Meldepflichten bestehen.
 
-- **Art. 6 Abs. 1 lit. a DSGVO** – Einwilligung der betroffenen Person
-- **Art. 6 Abs. 1 lit. b DSGVO** – Erfüllung eines Vertrags oder vorvertragliche Maßnahmen
-- **Art. 6 Abs. 1 lit. f DSGVO** – Berechtigtes Interesse des Verantwortlichen
-- **Art. 9 Abs. 2 lit. a DSGVO** – Ausdrückliche Einwilligung bei besonderen Kategorien personenbezogener Daten (Gesundheitsdaten)
+Die ausdrückliche Cloud-Einwilligung wird nicht aus der bloßen App-Nutzung abgeleitet. Die App fordert sie gesondert an. Serverseitig speichern wir Benutzer-ID, Dokumentversionen, Einwilligungsstatus sowie Zeitpunkt und gegebenenfalls Widerrufszeitpunkt. Die Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden, indem in der Einwilligungsansicht nach ausdrücklicher Bestätigung die Löschung des Cloud-Kontos gestartet oder die oben genannte E-Mail-Adresse kontaktiert wird. Wer diesen Weg wählt, arbeitet anschließend lokal weiter; die Cloud-Löschung wird zunächst für sieben Tage vorgemerkt. Gesetzlich erforderliche Restverarbeitungen bleiben möglich.
 
----
+## 5. Welche Daten verarbeitet werden
 
-## 4. Kategorien verarbeiteter Daten
+### 5.1 Konto und Anmeldung
 
-### 4.1 Registrierung und Benutzerkonto
+- E-Mail-Adresse und von Supabase sicher verarbeitete Passwortdaten bei E-Mail-Anmeldung;
+- Apple-Kennung, Identitäts-Token, einmaliger Autorisierungscode und gegebenenfalls Name bei „Mit Apple anmelden“;
+- Anzeigename, Profil- und technische Konto-IDs;
+- verschlüsselter Apple-Widerrufstoken, damit die Apple-Autorisierung bei endgültiger Kontolöschung widerrufen werden kann;
+- Einwilligungs- und Löschanforderungsnachweise.
 
-Bei der Registrierung in der App werden folgende Daten erhoben:
+### 5.2 Haushalt und Kind
 
-- **E-Mail-Adresse und Passwort** (bei E-Mail-Registrierung)
-- **Apple-ID-Token und ggf. Name** (bei „Mit Apple anmelden")
-- **Anzeigename** (optional, vom Nutzer gewählt)
-- **Profilbild-URL** (optional)
+- Haushaltsname, Name des Kindes, optionales Geburtsdatum;
+- Mitgliedschaften, Rollen sowie Erstellerzuordnungen;
+- sechsstellige Einladungscodes, Ablauf- und Nutzungsstatus sowie begrenzte Protokolle fehlgeschlagener Beitrittsversuche zur Missbrauchsabwehr.
 
-Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).
+### 5.3 Pflege- und Gesundheitsdaten
 
-Die App kann auch **ohne Registrierung** im lokalen Modus genutzt werden. In diesem Fall werden keine Kontodaten an unsere Server übermittelt.
+- Still- und Flaschenfütterungen einschließlich Zeit, Dauer, Seite und gegebenenfalls Menge;
+- Schlafphasen einschließlich Art, Start, Ende, Dauer und Pausen;
+- Wickeleinträge einschließlich Zeitpunkt und Art;
+- benutzerdefinierte Tracker, Werte, Zeitangaben und Notizen.
 
-### 4.2 Haushaltsdaten
+Diese Angaben können Rückschlüsse auf Gesundheit und Entwicklung des Kindes zulassen. Wir behandeln sie deshalb vorsorglich als besonders sensible Gesundheitsdaten.
 
-Registrierte Nutzer können einen Haushalt erstellen oder einem bestehenden Haushalt beitreten (über Einladungscode). Dabei werden verarbeitet:
+### 5.4 Momente
 
-- Name des Haushalts
-- Name des Kindes
-- Geburtsdatum des Kindes (optional)
-- Haushaltsmitglieder (Verknüpfung von Profilen)
-- Einladungscodes (einschl. Ablaufdatum und Nutzungsstatus)
+Fotos, Titel, Aufnahme-/Eintragszeit und technische Speicherpfade. Im Cloud-Modus liegen Moment-Fotos in einem privaten, haushaltsbezogen geschützten Speicher. Alle berechtigten Mitglieder desselben Haushalts können die geteilten Inhalte sehen.
 
-Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).
+### 5.5 Gerät, Betrieb und Einstellungen
 
-### 4.3 Tracking-Daten (Baby-Pflege)
+Lokal können unter anderem Anzeigeoptionen, Erinnerungen, Tracker-Reihenfolge, Nachtzeiten und Sitzungszustände gespeichert werden. Unsere Auftragsverarbeiter können außerdem technisch erforderliche Daten wie IP-Adresse, Zeitpunkt, Geräte-/Betriebssystemtyp, App-Version, Anfrage- und Fehlerdaten verarbeiten.
 
-Die App ermöglicht das Erfassen folgender pflegebezogener Daten des Kindes:
+## 6. Gerätefunktionen
 
-- **Stillsitzungen** (Zeitpunkt, Dauer, Seite)
-- **Flaschenfütterungen** (Zeitpunkt, Menge)
-- **Schlafphasen** (Start, Ende, Dauer, Pausierung)
-- **Wickeleinträge** (Zeitpunkt, Art)
-- **Benutzerdefinierte Tracker** (individuelle Zähler, Zeitmessungen, Werte, Notizen)
+- **Kamera und Fotobibliothek:** nur nach iOS-Freigabe zur Aufnahme oder Auswahl von Moment-Fotos;
+- **Mitteilungen:** optional für lokale Erinnerungen und lokal dargestellte Hinweise zu Aktivitäten anderer Haushaltsmitglieder; der auslösende Datensatz kann über Supabase Realtime empfangen werden;
+- **Live Activities:** zeigen laufende Timer auf Sperrbildschirm und Dynamic Island. Die Anzeige wird lokal erstellt. Eine dort ausgelöste Stopp-Aktion aktualisiert den App-Datensatz und wird im Cloud-Modus regulär mit dem Haushalt synchronisiert.
 
-Diese Daten können Rückschlüsse auf den Gesundheitszustand des Kindes zulassen und werden daher als **besondere Kategorien personenbezogener Daten (Gesundheitsdaten)** im Sinne von Art. 9 DSGVO behandelt.
+BabyTrack verwendet derzeit keine Standortdaten, Kontakte, Bluetooth, Mikrofon oder HealthKit. Die App fordert keine App-Tracking-Transparency-Erlaubnis an, enthält keine Werbe-SDKs und betreibt kein Tracking über Apps oder Websites anderer Unternehmen.
 
-Rechtsgrundlage: Art. 9 Abs. 2 lit. a DSGVO (ausdrückliche Einwilligung). Die Einwilligung erfolgt durch die aktive Nutzung der Tracking-Funktionen und wird im Rahmen des Onboardings eingeholt.
+## 7. Supabase
 
-Im **lokalen Modus** werden diese Daten ausschließlich auf dem Endgerät des Nutzers gespeichert. Bei **registrierten Nutzern** werden die Daten mit unserem Cloud-Dienst synchronisiert (siehe Abschnitt 6).
+Für Anmeldung, Datenbank, privaten Fotospeicher, Serverfunktionen und Echtzeitsynchronisierung nutzen wir Supabase, Inc. Supabase handelt für die von uns eingestellten Inhalte als Auftragsverarbeiter. Nach der aktuellen Projektkonfiguration befindet sich die primäre Datenbankregion in Frankfurt am Main. Technische Support-, Sicherheits- oder Unterauftragnehmerverarbeitungen können außerhalb des EWR stattfinden.
 
-### 4.4 Momente (Fotos)
+Für Übermittlungen in Drittländer nutzt Supabase nach eigener Erklärung geeignete Garantien, insbesondere EU-Standardvertragsklauseln. Weitere Informationen: [Supabase Privacy](https://supabase.com/privacy).
 
-Nutzer können Fotos mit Titeln und Zeitstempeln als „Momente" speichern. Im **lokalen Modus** werden diese Bilddaten ausschließlich auf dem Endgerät gespeichert. Bei **registrierten Nutzern** werden Fotos, Titel und Zeitstempel zusätzlich mit unserem Cloud-Dienst synchronisiert und auf unseren Servern gespeichert.
+## 8. Apple App Store, iCloud Drive und RevenueCat
 
-Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch aktive Nutzung).
+Käufe und Abonnements werden über Apple abgewickelt. Apple verarbeitet dabei Daten in eigener Verantwortung nach der [Apple-Datenschutzrichtlinie](https://www.apple.com/legal/privacy/). Wir erhalten keine vollständigen Kreditkarten- oder Bankdaten.
 
-### 4.5 Lokale Einstellungen
+Für die externe Datensicherung verwenden wir außerdem iCloud Drive von Apple. Die aus Supabase exportierten Datenbankinhalte und Moment-Fotos werden vor dem Hochladen lokal verschlüsselt und als verschlüsseltes Sicherungsarchiv in einem zugriffsgeschützten iCloud-Drive-Konto des Anbieters gespeichert. Der hierfür verwendete Schlüssel wird getrennt vom Sicherungsarchiv aufbewahrt. Apple erhält neben den technisch erforderlichen Konto-, Verbindungs- und Dateimetadaten nur das bereits verschlüsselte Archiv. Weitere Informationen enthalten die [iCloud-Nutzungsbedingungen](https://www.apple.com/legal/internet-services/icloud/) und die Apple-Datenschutzrichtlinie. Rechtsgrundlagen sind die für den Cloud-Modus erteilte Einwilligung nach Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO für Datensicherheit und Wiederherstellbarkeit.
 
-Die App speichert nutzerspezifische Einstellungen lokal auf dem Gerät (z. B. Anzeigepräferenzen, Benachrichtigungseinstellungen, Nachtmodus-Zeiten, Tracker-Anordnung). Diese Daten verlassen das Gerät nicht.
+Zur Darstellung von Angeboten, Prüfung von Berechtigungen und Wiederherstellung von Käufen verwenden wir RevenueCat, Inc., USA. Je nach Nutzung verarbeitet RevenueCat insbesondere eine zufällige anonyme App-Nutzerkennung oder bei angemeldeten Nutzern die Supabase-Benutzer-ID, Geräte- und Betriebssystemtyp, App-Version, Land/Region beziehungsweise Locale, Zeitpunkte der letzten Nutzung, Produkt-, Transaktions-, Beleg- und Abonnementinformationen. Diese Daten dienen nicht personalisierter Werbung oder einem appübergreifenden Werbeprofil.
 
----
+RevenueCat erklärt, Kundendaten auf AWS-Infrastruktur in den USA zu speichern und für internationale Übermittlungen unter anderem Standardvertragsklauseln zu verwenden. Rechtsgrundlagen sind Art. 6 Abs. 1 lit. b DSGVO für gekaufte Leistungen und Art. 6 Abs. 1 lit. f DSGVO für die zuverlässige Verwaltung des Kaufstatus. Weitere Informationen: [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).
 
-## 5. Geräteberechtigungen
+## 9. Website über GitHub Pages
 
-Die App fordert folgende Berechtigungen an, die Sie jederzeit in den Systemeinstellungen Ihres Geräts widerrufen können:
+Die Website wird über GitHub Pages, einen Dienst von GitHub, Inc., bereitgestellt. Beim Abruf werden technisch notwendige Verbindungsdaten, insbesondere die IP-Adresse, an GitHub übertragen. GitHub kann Besucher-IP-Adressen zu Sicherheitszwecken protokollieren. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Die Website setzt derzeit keine eigenen Analyse-, Werbe- oder Marketingdienste und keine eigenen nicht erforderlichen Cookies ein. Weitere Informationen: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
-| Berechtigung | Zweck | Erforderlich |
-|---|---|---|
-| **Kamera** | Aufnahme von Fotos für die Funktion „Momente" | Nein, optional |
-| **Fotobibliothek** | Auswahl vorhandener Fotos für „Momente" | Nein, optional |
-| **Mitteilungen** | Lokale Benachrichtigungen bei Partner-Aktivitäten im Haushalt | Nein, optional |
-| **App-Tracking-Transparenz** | Einholung der Zustimmung für etwaige Tracking-Zwecke (siehe Abschnitt 8) | Nein, optional |
+## 10. Empfänger und gemeinsame Haushalte
 
-Die App erhebt **keine** Standortdaten, greift **nicht** auf HealthKit oder Gesundheitsdaten des Betriebssystems zu und nutzt **kein** Mikrofon, Bluetooth oder Kontakte.
+Daten erhalten nur Stellen, die sie für die beschriebenen Zwecke benötigen: Supabase, Apple für App-Store-Dienste und die verschlüsselte iCloud-Datensicherung, RevenueCat und für die Website GitHub. Daneben sehen alle berechtigten Mitglieder eines Cloud-Haushalts die dort geteilten Pflegeeinträge und Moment-Fotos. Einladungscodes dürfen daher nur an vertrauenswürdige Personen gegeben werden.
 
----
+Eine Weitergabe zu Werbezwecken oder ein Verkauf personenbezogener Daten findet nicht statt. Eine Offenlegung kann erfolgen, wenn wir gesetzlich dazu verpflichtet sind oder sie zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.
 
-## 6. Cloud-Dienst und Datenübermittlung
+## 11. Sicherheit und Sicherheitsvorfälle
 
-### 6.1 Supabase
+Zum Schutz der Daten setzen wir technische und organisatorische Maßnahmen ein. Dazu gehören verschlüsselte Übertragung per TLS, Supabase-Authentifizierung, Row-Level-Security, private Foto-Buckets, serverseitige Rechteprüfungen, Schutz vor dem Durchprobieren von Einladungscodes, Größenbegrenzungen für Nutzereingaben, minimale Berechtigungen für Löschfunktionen und verschlüsselte Speicherung von Apple-Widerrufstokens. Zugänge und Geheimnisse werden getrennt vom App-Quellcode verwaltet.
 
-Für die Bereitstellung von Authentifizierung, Datenbankspeicherung und Echtzeitsynchronisation nutzen wir den Dienst **Supabase** (Supabase, Inc., 970 Toa Payoh North #07-04, Singapore 318992).
+Kein internetbasierter Dienst kann absolute Sicherheit oder ununterbrochene Verfügbarkeit garantieren. Bei einer Verletzung des Schutzes personenbezogener Daten informieren wir die zuständige Aufsichtsbehörde und betroffene Personen nach Art. 33 und 34 DSGVO, soweit die gesetzlichen Voraussetzungen erfüllt sind.
 
-Supabase hostet die Datenbank auf Infrastruktur der **Amazon Web Services (AWS)**. Der Serverstandort unseres Projekts befindet sich innerhalb der **Europäischen Union (Frankfurt, Deutschland)**.
+Wir exportieren die bei Supabase gespeicherten App-Daten einschließlich Moment-Fotos grundsätzlich einmal täglich. Das Sicherungsarchiv wird vor dem Hochladen lokal verschlüsselt und getrennt vom laufenden Supabase-Projekt in dem unter Abschnitt 8 beschriebenen iCloud Drive gespeichert. Die Cloud-Synchronisierung zwischen App-Geräten ist hiervon unabhängig und ersetzt keine Datensicherung.
 
-Verarbeitete Daten bei Supabase:
-- Kontodaten (E-Mail, verschlüsseltes Passwort, Profildaten)
-- Haushaltsdaten und Mitgliedschaften
-- Tracking-Daten (Fütterung, Schlaf, Wickeln, benutzerdefinierte Einträge)
-- Momente-Daten (Fotos, Titel, Zeitstempel)
-
-Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung); Art. 28 DSGVO (Auftragsverarbeitung).
-
-Weitere Informationen: https://supabase.com/privacy
-
-### 6.2 Datenübermittlung in Drittländer
-
-Supabase Inc. hat seinen Sitz in Singapur. Soweit personenbezogene Daten außerhalb des EWR verarbeitet werden, erfolgt dies auf Grundlage von **Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO)** und/oder eines **Angemessenheitsbeschlusses** der Europäischen Kommission. Die Datenbankserver selbst befinden sich in der EU (siehe 6.1).
-
----
-
-## 7. In-App-Käufe und Zahlungsabwicklung
-
-Die App bietet kostenpflichtige Abonnements („BabyTrack Pro") über den Apple App Store an:
-
-- Monatliches Abonnement
-- Jährliches Abonnement
-- Einmaliger Lifetime-Kauf
-
-Die Zahlungsabwicklung erfolgt ausschließlich über **Apple (Apple Inc.)** im Rahmen der App-Store-Kaufabwicklung. Wir erhalten **keine** Zahlungsdaten (Kreditkartennummern, Bankdaten o. Ä.) vom Nutzer. Apple stellt uns lediglich Informationen über den Kaufstatus und die Gültigkeit des Abonnements bereit.
-
-Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).
-
-Weitere Informationen: https://www.apple.com/legal/privacy/
-
-### 7.1 RevenueCat
-
-Wir nutzen den Dienst **RevenueCat** (RevenueCat, Inc., San Francisco, USA) zur Analyse und Verwaltung von In-App-Abonnements. RevenueCat erhält dabei pseudonymisierte Kaufdaten (App-User-ID, Abonnementstatus, Produkt-ID, Transaktionsdaten) über die StoreKit-Schnittstelle.
-
-Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Verwaltung und Analyse von Abonnements).
-
-Weitere Informationen: https://www.revenuecat.com/privacy/
-
----
-
-## 8. Tracking und App-Tracking-Transparenz
-
-Die App fragt gemäß den Vorgaben von Apple über das **App Tracking Transparency (ATT)**-Framework um Erlaubnis, bevor etwaige Tracking-Technologien eingesetzt werden.
-
-Wenn Sie dem Tracking **nicht zustimmen**, werden keinerlei Tracking-Identifier erhoben oder an Dritte weitergegeben.
-
-Derzeit setzt die App **keine Werbe-SDKs oder Analytics-Dienste von Drittanbietern** ein, die ein geräteübergreifendes Tracking durchführen. Das ATT-Framework ist vorsorglich implementiert, um für zukünftige Integrationen vorbereitet zu sein. Sollte sich dies ändern, wird diese Datenschutzerklärung entsprechend aktualisiert.
-
-Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
-
----
-
-## 9. Live-Aktivitäten
-
-Die App nutzt Apples **Live Activities** (ActivityKit), um laufende Timer (z. B. Schlaf- oder Stillzeiten) auf dem Sperrbildschirm und in der Dynamic Island anzuzeigen. Diese Funktion verarbeitet Daten **ausschließlich lokal auf dem Gerät** und übermittelt keine Daten an externe Server.
-
----
-
-## 10. Lokale Benachrichtigungen
-
-Bei Aktivierung der Partner-Benachrichtigungen sendet die App **lokale Push-Benachrichtigungen** (ohne externen Push-Server), wenn ein Haushaltsmitglied eine Aktion im gemeinsamen Haushalt vornimmt. Die Benachrichtigungen werden lokal auf dem Endgerät erzeugt.
-
----
-
-## 11. Datensicherheit
-
-Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer personenbezogenen Daten:
-
-- Verschlüsselte Datenübertragung (TLS/HTTPS) zwischen App und Cloud-Diensten
-- Authentifizierung über sichere Token (JWT) und verschlüsselte Passwortspeicherung (bcrypt)
-- Zugriffskontrolle auf Datenbankebene über Row Level Security (RLS) bei Supabase
-- Lokale Daten werden in der App-Sandbox des Betriebssystems geschützt gespeichert
-
----
+Die tägliche Sicherung verringert das Verlustrisiko, kann aber keine vollständige oder sofortige Wiederherstellung garantieren. Insbesondere können Änderungen seit dem letzten erfolgreichen Export sowie einzelne technisch nicht ordnungsgemäß übertragene Inhalte verloren gehen. Eine Wiederherstellung kann Zeit beanspruchen; nach einem vollständigen Ausfall können Nutzer gegebenenfalls ihre Anmeldung erneuern oder ein Passwort neu setzen müssen. Diese Hinweise schränken unsere gesetzlichen Pflichten, insbesondere nach Art. 32 DSGVO, und die Rechte betroffener Personen nicht ein.
 
 ## 12. Speicherdauer und Löschung
 
-| Datenart | Speicherdauer |
-|---|---|
-| Kontodaten | Bis zur Löschung des Benutzerkontos |
-| Haushaltsdaten | Bis zur Löschung des Haushalts oder Kontos |
-| Tracking-Daten (Cloud) | Bis zur Löschung durch den Nutzer oder bei Kontolöschung (Soft-Delete, anschließend endgültige Löschung) |
-| Tracking-Daten (lokal) | Bis zur Deinstallation der App oder manuellen Löschung |
-| Momente (Fotos, Cloud) | Bis zur Löschung durch den Nutzer oder bei Kontolöschung |
-| Momente (Fotos, lokal) | Bis zur Deinstallation der App oder manueller Löschung |
-| Lokale Einstellungen | Bis zur Deinstallation der App |
+- Lokale Daten bleiben grundsätzlich bis zur Löschung in der App oder Deinstallation gespeichert. Abmeldung, Wechsel in den lokalen Modus aus der Einwilligungsansicht und Start der Kontolöschung löschen die dem bisherigen Konto zugeordneten lokalen Daten unmittelbar.
+- Aktive Cloud-Konto-, Einwilligungs-, Haushalts-, Pflege- und Moment-Daten werden bis zur Löschung oder bis zum Wegfall des Zwecks gespeichert. Nach Widerruf wird die normale Cloud-Verarbeitung unmittelbar gesperrt und die Löschung nach dem in Abschnitt 13 beschriebenen Verfahren durchgeführt.
+- Gelöschte synchronisierte Datensätze bleiben als nicht sichtbare Löschmarker bis zu 90 Tage bestehen, damit zeitweise offline befindliche Geräte die Löschung erhalten, und werden anschließend endgültig bereinigt.
+- Verwendete oder abgelaufene Einladungscodes und alte Beitrittsversuchsprotokolle werden spätestens nach 90 Tagen bereinigt.
+- Der verschlüsselte Apple-Widerrufstoken bleibt bis zur endgültigen Kontolöschung oder Ersetzung gespeichert.
+- Abgeschlossene oder abgebrochene Kontolöschungsaufträge werden nach 90 Tagen entfernt. Fehlgeschlagene Aufträge bleiben bis zur Fehlerklärung gespeichert.
+- Technische Sicherheits- und Fehlerprotokolle unserer Dienstleister richten sich nach deren erforderlichen Aufbewahrungsfristen.
+- Tägliche verschlüsselte Sicherungsarchive werden bis zu sieben Tage im aktiven Sicherungsordner aufbewahrt und anschließend daraus entfernt. iCloud Drive kann gelöschte Dateien danach noch bis zu 30 weitere Tage zur Wiederherstellung bereithalten, sofern sie nicht früher dauerhaft gelöscht werden. Bereits aus dem laufenden System gelöschte Daten können während dieser Zeit noch in einem verschlüsselten Sicherungsarchiv enthalten sein. Die Archive sind zugriffsbeschränkt und werden ausschließlich für Sicherheits- und Wiederherstellungszwecke verwendet.
 
-Bei **Kontolöschung** wird über eine serverseitige Funktion (`delete_own_account`) das Profil und alle zugehörigen Daten auf unseren Servern gelöscht.
+## 13. Kontolöschung und geteilte Inhalte
 
----
+Die Kontolöschung kann in den Einstellungen oder, bei nicht erteilter beziehungsweise widerrufener Cloud-Einwilligung, über „Cloud-Konto löschen und lokal fortfahren“ gestartet werden. Vor dem lokalen Fortfahren zeigt die App eine gesonderte Bestätigung. Die Löschung wird für sieben Tage vorgemerkt und kann innerhalb dieser Frist nach erneuter Anmeldung abgebrochen werden. Währenddessen ist die normale Cloud-Nutzung gesperrt. Nach Ablauf werden Konto, Profil, Einwilligungsdaten, Apple-Autorisierung und das mit der Supabase-ID verknüpfte RevenueCat-Kundenprofil entfernt.
 
-## 13. Ihre Rechte als betroffene Person
+Ist die löschende Person das einzige Haushaltsmitglied, werden Haushalt, Cloud-Einträge und Moment-Fotos entfernt. Gibt es weitere Haushaltsmitglieder, bleiben die gemeinsam geführten Pflegeeinträge und Fotos für diese Mitglieder erhalten; die persönliche Erstellerzuordnung der gelöschten Person wird entfernt und eine andere Person übernimmt erforderliche Verwaltungsrollen. Wer auch geteilte Inhalte löschen möchte, sollte sie vor der Kontolöschung entfernen oder uns kontaktieren, soweit Rechte anderer Personen dem nicht entgegenstehen.
 
-Nach der DSGVO stehen Ihnen folgende Rechte zu:
+Die Kontolöschung beendet **kein** Apple-Abonnement. Dieses muss separat in den Apple-ID-Abonnementeinstellungen gekündigt werden.
 
-- **Auskunftsrecht** (Art. 15 DSGVO) – Sie haben das Recht zu erfahren, welche Daten wir über Sie gespeichert haben.
-- **Recht auf Berichtigung** (Art. 16 DSGVO) – Sie können die Korrektur unrichtiger Daten verlangen.
-- **Recht auf Löschung** (Art. 17 DSGVO) – Sie können die Löschung Ihrer Daten verlangen. Die App bietet eine integrierte Kontolöschungsfunktion.
-- **Recht auf Einschränkung der Verarbeitung** (Art. 18 DSGVO) – Sie können die Einschränkung der Verarbeitung verlangen.
-- **Recht auf Datenübertragbarkeit** (Art. 20 DSGVO) – Sie haben das Recht, Ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
-- **Widerspruchsrecht** (Art. 21 DSGVO) – Sie können der Verarbeitung Ihrer Daten auf Grundlage berechtigter Interessen widersprechen.
-- **Recht auf Widerruf der Einwilligung** (Art. 7 Abs. 3 DSGVO) – Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.
+## 14. Ihre Rechte
 
-Zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter der oben genannten E-Mail-Adresse.
+Betroffene Personen haben bei Vorliegen der gesetzlichen Voraussetzungen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch nach Art. 15 bis 21 DSGVO. Eine Einwilligung kann nach Art. 7 Abs. 3 DSGVO jederzeit für die Zukunft widerrufen werden. Der Widerruf berührt die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung nicht.
 
----
+Anfragen können an [maxfroehlich@gmx.net](mailto:maxfroehlich@gmx.net) gesendet werden. Zur Vermeidung unbefugter Auskünfte können wir einen angemessenen Identitätsnachweis verlangen. Sorgeberechtigte können Rechte des Kindes geltend machen, soweit sie dazu berechtigt sind.
 
-## 14. Beschwerderecht bei einer Aufsichtsbehörde
+## 15. Beschwerderecht
 
-Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die für Sie zuständige Aufsichtsbehörde richtet sich nach Ihrem Wohnort bzw. Bundesland. Eine Liste der Aufsichtsbehörden finden Sie unter:
+Sie können sich bei einer Datenschutzaufsichtsbehörde beschweren, insbesondere an Ihrem Aufenthaltsort oder am Ort des mutmaßlichen Verstoßes. Für den Anbieter ist grundsätzlich die Berliner Beauftragte für Datenschutz und Informationsfreiheit zuständig. [Übersicht der deutschen Datenschutzbehörden](https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html).
 
-https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html
+## 16. Pflicht zur Bereitstellung und automatisierte Entscheidungen
 
----
+Für den lokalen Modus müssen keine Kontodaten bereitgestellt werden. Für Cloud-Synchronisierung sind Konto- und Einwilligungsdaten technisch erforderlich. Ohne sie kann nur der lokale Modus genutzt werden. Es findet keine ausschließlich automatisierte Entscheidung mit rechtlicher oder ähnlich erheblicher Wirkung und kein Profiling zu Werbezwecken statt.
 
-## 15. Datenverarbeitung durch den App Store
+## 17. Änderungen
 
-Der Download der App erfolgt über den **Apple App Store**. Dabei können personenbezogene Daten (z. B. Nutzername, E-Mail-Adresse, Apple-ID, Geräte-ID, IP-Adresse) durch Apple verarbeitet werden. Hierauf haben wir keinen Einfluss.
-
-Verantwortlich: Apple Inc., One Apple Park Way, Cupertino, CA 95014, USA.
-Datenschutzerklärung: https://www.apple.com/legal/privacy/
-
----
-
-## 16. Minderjährigenschutz
-
-Die App richtet sich an Eltern und Erziehungsberechtigte. Die Registrierung und Nutzung ist nur für Personen ab **16 Jahren** gestattet. Personenbezogene Daten von Kindern unter 16 Jahren werden nicht wissentlich erhoben, soweit diese nicht durch einen Erziehungsberechtigten im Rahmen der bestimmungsgemäßen Nutzung der App (Baby-Tracking) eingegeben werden.
-
-Die im Rahmen des Baby-Trackings erfassten Daten über Säuglinge und Kleinkinder werden ausschließlich durch die Erziehungsberechtigten eingegeben und verwaltet.
-
----
-
-## 17. Änderungen dieser Datenschutzerklärung
-
-Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder bei Änderungen des Dienstes oder der Datenverarbeitung anzupassen. Die jeweils aktuelle Fassung finden Sie stets unter:
-
-https://maxfroehlich1410.github.io/BabyTracking-site/datenschutz/
-
-Bei wesentlichen Änderungen werden wir die Nutzer innerhalb der App informieren.
-
----
-
-*Letzte Aktualisierung: 30. März 2026*
+Wir aktualisieren diese Erklärung, wenn sich Funktionen, Dienstleister oder Rechtsanforderungen ändern. Die aktuelle Fassung und ihr Stand sind stets auf dieser Website abrufbar. Über wesentliche Änderungen informieren wir in der App; ist eine neue Einwilligung erforderlich, bleibt die Cloud-Nutzung bis zu einer erneuten ausdrücklichen Zustimmung gesperrt.

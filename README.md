@@ -15,8 +15,23 @@ Hosted via GitHub Pages.
 ├── AppLogo.png                 ← App logo
 ├── Datenschutzerklaerung.md    ← Source: Privacy Policy (Markdown)
 ├── Nutzungsbedingungen.md      ← Source: Terms of Use (Markdown)
+├── PrivacyPolicy.md            ← English privacy source
+├── TermsOfUse.md               ← English terms source
+├── PoliticaPrivacidad.md       ← Spanish privacy source
+├── TerminosUso.md              ← Spanish terms source
+├── scripts/build_legal_pages.rb ← Generates all published legal pages
 └── README.md                   ← This file
 ```
+
+## Update legal pages
+
+Edit only the six Markdown source files and then regenerate the publishable HTML:
+
+```bash
+ruby scripts/build_legal_pages.rb
+```
+
+The generator keeps the German, English and Spanish URLs and the legacy redirects consistent.
 
 ## Deployment with GitHub Pages
 
@@ -43,6 +58,10 @@ Expected live URLs:
 - `https://maxfroehlich1410.github.io/BabyTracking-site/`
 - `https://maxfroehlich1410.github.io/BabyTracking-site/datenschutz/`
 - `https://maxfroehlich1410.github.io/BabyTracking-site/nutzungsrichtlinien/`
+- `https://maxfroehlich1410.github.io/BabyTracking-site/en/privacy/`
+- `https://maxfroehlich1410.github.io/BabyTracking-site/en/terms/`
+- `https://maxfroehlich1410.github.io/BabyTracking-site/es/privacidad/`
+- `https://maxfroehlich1410.github.io/BabyTracking-site/es/terminos/`
 
 ### URL structure on GitHub Pages
 
@@ -66,7 +85,7 @@ If you set up a custom domain (e.g. `babytrack-app.de`):
 - Add a `CNAME` file to the repo root containing your domain name.
 - Configure DNS records as described in the [GitHub Pages custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
-## TODO Checklist — Fill In Before Going Live
+## Release checklist
 
 The following placeholders must be reviewed and filled in manually:
 
@@ -80,11 +99,13 @@ The following placeholders must be reviewed and filled in manually:
 - [x] **Berufsspezifische Angaben** – Nicht zutreffend
 - [x] **Verbraucherstreitbeilegung (§ 36 VSBG)** – Nicht bereit/verpflichtet
 
-### Datenschutzerklärung (`datenschutz.html`)
+### Datenschutzerklärung (`datenschutz/index.html`)
 
 - [x] **Supabase-Serverstandort** – Frankfurt am Main, Deutschland (EU)
+- [x] **App-Verhalten** – Cloud-Momente, Einwilligung, RevenueCat, 7-Tage-Kontolöschung und tägliche verschlüsselte iCloud-Sicherung abgeglichen
 
 ### General
 
 - [x] **Domain/URLs** – Updated to `https://maxfroehlich1410.github.io/BabyTracking-site/`
+- [ ] Generate the HTML pages after every source change and review `git diff`
 - [ ] Review all legal content for accuracy with a legal professional before going live
