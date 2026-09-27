@@ -1,46 +1,33 @@
-# Publication status — updated 12 September 2026
+# Legal publication — 27 September 2026
 
-The revised DE/EN/ES legal documents were approved for publication ahead of the
-first public app release. Publishing the text does not remove the requirement to
-put every described app, backend and backup control into operation before that
-release.
+Current publication version: **2026-09-27**, DE/EN/ES privacy policy and terms.
+The site home page links to the new immutable `/versions/2026-09-27/` pages.
+The six older unversioned app URLs retain their accepted 2026-09-12 source text
+with an explicit link to the current version. An immutable 2026-09-12 archive
+and source SHA-256 manifest are also included. This prevents an old app accepting
+version 2026-09-12 while silently displaying replacement terms.
 
-The production dashboard was inspected on 6 September 2026. It does not yet
-contain the consent, encrypted Apple revocation-token or invitation-attempt
-tables introduced by app migration 006. The organisation is on the Free plan,
-which does not provide scheduled project backups. Do not describe planned
-controls as already operational.
+The new documents describe the owner-operated encrypted database/photo backups
+in Germany, seven-day backup rotation, Healthchecks status-only monitoring,
+local-data preservation, account-bound local recovery, Apple revocation,
+seven-day account-deletion grace period and hourly retention processing.
+Unavailable lifetime purchases are no longer advertised. The established public
+contact maxfroehlich@gmx.net is retained.
 
-On 12 September 2026, the owner chose a daily self-managed export of Supabase
-database data and moment photos instead of a paid Supabase plan. The archive is
-to be encrypted locally before upload, stored in an access-restricted iCloud
-Drive with the key held separately, and removed from the active backup folder
-after no more than seven days. iCloud may retain deleted files for up to 30
-additional days unless permanently deleted earlier. All six documents now
-describe that process and use version
-`2026-09-12`. Cloud syncing is explicitly distinguished from a backup, and the
-documents disclose that changes after the last successful export can be lost.
+Production migration 006 and both deletion/Apple registration functions were
+deployed on 23 September. The cron credential misconfiguration was corrected,
+and the production request path completed retention with HTTP 200. Initial real
+backup/restore succeeded on 23 September; read-only server inspection confirmed
+a successful automatic backup on 27 September at 01:15:58 UTC and an active timer.
+No other server applications were changed.
 
-Before releasing the app version that accepts these documents:
+Consent migration 008 supports old and new versions, keeps historical evidence,
+prevents downgrades and retains compatible cloud access for existing clients.
+Local and staging regression checks passed. Production installation and live
+publication verification are recorded in the app repository's dated release
+report. The updated app must be distributed before existing installations use
+its new consent screen and version-pinned URLs. No user consent is manufactured.
 
-- Coordinate the updated app and consent rollout without locking out older
-  clients. Migration 006 is intentionally not deployed yet.
-- Deploy and verify the Apple token and deletion/retention functions and their
-  secrets, including actual 90-day cleanup and failure handling.
-- Put the documented daily database-and-photo export, encryption, separate key
-  storage, seven-day active rotation and disclosed iCloud deleted-file retention
-  into operation and complete a restore
-  test before the app release. Wording alone is not a backup control. Verify the
-  remaining security statements against production.
-- Complete the DPA/subprocessor review and legal review. Administrator MFA was
-  verified on 6 September 2026; keep it enabled.
-- Keep legal document version `2026-09-12` aligned between the app, backend and
-  all six documents; do not silently change an accepted version.
-- Regenerate the HTML with `ruby scripts/build_legal_pages.rb` after every source
-  change and verify all six live URLs.
-
-Policy version `2026-09-12` is published from `main` before the first public app
-release. The app must not claim acceptance of this version or expose the related
-cloud flow until its matching consent and backend controls are deployed and
-tested. The separately applied backward-compatible database permission fix does
-not satisfy the app release gate.
+Technical consistency review is complete for this publication. A qualified legal
+review and the owner's Supabase DPA status have not been confirmed; publication
+is not a certification of legal compliance.

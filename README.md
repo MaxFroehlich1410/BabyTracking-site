@@ -102,10 +102,19 @@ The following placeholders must be reviewed and filled in manually:
 ### Datenschutzerklärung (`datenschutz/index.html`)
 
 - [x] **Supabase-Serverstandort** – Frankfurt am Main, Deutschland (EU)
-- [x] **App-Verhalten** – Cloud-Momente, Einwilligung, RevenueCat, 7-Tage-Kontolöschung und tägliche verschlüsselte iCloud-Sicherung abgeglichen
+- [ ] **App-Verhalten** – Die veröffentlichte Fassung 2026-09-12 muss mit dem tatsächlichen Backup-Betrieb und dem Erhalt lokaler Daten beim Cloud-Ausstieg abgeglichen werden. Unveröffentlichte Korrekturentwürfe und Rollout-Plan: `drafts/2026-09-19/`.
 
 ### General
 
 - [x] **Domain/URLs** – Updated to `https://maxfroehlich1410.github.io/BabyTracking-site/`
 - [ ] Generate the HTML pages after every source change and review `git diff`
 - [ ] Review all legal content for accuracy with a legal professional before going live
+
+
+## Current publication — 27 September 2026
+
+The current six documents live under `versions/2026-09-27/`; edit those sources
+before publication and run `ruby scripts/build_legal_pages.rb`. Once a version
+has been accepted by users, create a new dated version instead of overwriting it.
+Root Markdown sources and legacy routes preserve version 2026-09-12 for older
+app builds. The home page points to the current version. See PUBLICATION_STATUS.md.

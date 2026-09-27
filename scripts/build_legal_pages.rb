@@ -121,6 +121,7 @@ end
 def page_html(page, body)
   prefix = relative_prefix(page[:output])
   labels = page[:labels]
+  legal_prefix = page[:version] ? "#{prefix}versions/#{page[:version]}/" : prefix
   language_paths = if page[:active] == :privacy
     { de: "datenschutz/", en: "en/privacy/", es: "es/privacidad/" }
   else
@@ -128,8 +129,8 @@ def page_html(page, body)
   end
   nav = [
     nav_link("#{prefix}index.html", labels[:home], false),
-    nav_link("#{prefix}#{page[:lang] == "de" ? "datenschutz" : page[:lang] == "en" ? "en/privacy" : "es/privacidad"}/", labels[:privacy], page[:active] == :privacy),
-    nav_link("#{prefix}#{page[:lang] == "de" ? "nutzungsrichtlinien" : page[:lang] == "en" ? "en/terms" : "es/terminos"}/", labels[:terms], page[:active] == :terms),
+    nav_link("#{legal_prefix}#{page[:lang] == "de" ? "datenschutz" : page[:lang] == "en" ? "en/privacy" : "es/privacidad"}/", labels[:privacy], page[:active] == :privacy),
+    nav_link("#{legal_prefix}#{page[:lang] == "de" ? "nutzungsrichtlinien" : page[:lang] == "en" ? "en/terms" : "es/terminos"}/", labels[:terms], page[:active] == :terms),
     nav_link("#{prefix}impressum.html", labels[:legal], false),
     nav_link("#{prefix}index.html#support", labels[:support], false)
   ].join("\n        ")
@@ -161,11 +162,12 @@ def page_html(page, body)
       </header>
       <main>
         <div class="language-links" aria-label="Language">
-          <a href="#{prefix}#{language_paths[:de]}">Deutsch</a>
-          <a href="#{prefix}#{language_paths[:en]}">English</a>
-          <a href="#{prefix}#{language_paths[:es]}">Español</a>
+          <a href="#{legal_prefix}#{language_paths[:de]}">Deutsch</a>
+          <a href="#{legal_prefix}#{language_paths[:en]}">English</a>
+          <a href="#{legal_prefix}#{language_paths[:es]}">Español</a>
         </div>
         <article>
+          #{page[:notice]}
           #{body}
         </article>
       </main>
@@ -179,11 +181,33 @@ def page_html(page, body)
   HTML
 end
 
-PAGES.each do |page|
-  source = File.read(File.join(ROOT, page[:source]), encoding: "UTF-8")
-  output = File.join(ROOT, page[:output])
-  FileUtils.mkdir_p(File.dirname(output))
-  File.write(output, page_html(page, render_markdown(source)), encoding: "UTF-8")
+CURRENT_VERSION = "2026-09-27"
+VERSION_LABELS = {
+  "de" => "Diese Fassung bleibt für ältere App-Versionen verfügbar. Die aktuelle Datenschutzerklärung und die aktuellen Nutzungsbedingungen vom 27. September 2026 berücksichtigen die Serversicherung in Deutschland und das lokale Fortfahren. Zur aktuellen Fassung",
+  "en" => "This version remains available for older app releases. The current privacy policy and terms dated September 27, 2026 describe server backups in Germany and continuing locally. Read the current version",
+  "es" => "Esta versión sigue disponible para versiones anteriores de la app. La política y los términos actuales del 27 de septiembre de 2026 describen las copias en Alemania y la continuación en modo local. Ver la versión actual"
+}.freeze
+
+PAGES.each do |original|
+  [nil, "2026-09-12", CURRENT_VERSION].each do |version|
+    page = original.dup
+    if version
+      page[:source] = "versions/#{version}/#{original[:source]}"
+      page[:output] = "versions/#{version}/#{original[:output]}"
+      page[:version] = version
+    end
+    if version == CURRENT_VERSION
+      page[:title] = page[:title].gsub("BabyTrack", "BabyTracking")
+      page[:description] = page[:description].gsub("BabyTrack", "BabyTracking")
+    else
+      destination = "#{relative_prefix(page[:output])}versions/#{CURRENT_VERSION}/#{original[:output].delete_suffix('index.html')}"
+      page[:notice] = %(<aside class="version-notice"><p><a href="#{destination}">#{CGI.escapeHTML(VERSION_LABELS[page[:lang]])}</a></p></aside>)
+    end
+    source = File.read(File.join(ROOT, page[:source]), encoding: "UTF-8")
+    output = File.join(ROOT, page[:output])
+    FileUtils.mkdir_p(File.dirname(output))
+    File.write(output, page_html(page, render_markdown(source)), encoding: "UTF-8")
+  end
 end
 
 {
@@ -202,4 +226,4 @@ end
   HTML
 end
 
-puts "Generated #{PAGES.length} legal pages and 2 compatibility redirects."
+puts "Generated #{PAGES.length * 3} versioned and compatibility legal pages and 2 compatibility redirects."
