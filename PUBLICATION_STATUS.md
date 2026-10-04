@@ -1,3 +1,30 @@
+# Legal update — 4 October 2026
+
+**Publication source for deployment.** The six DE/EN/ES documents in
+`versions/2026-10-04/` are intended for BabyTracking 1.0 (build 33). They explain no HealthKit/Apple
+Health integration, no CloudKit/iCloud synchronization, exclusion of sensitive
+local storage from device backups, potential loss of unsynced local records,
+Supabase synchronization and server backups in Germany without iCloud.
+Exports explicitly saved by users, the system photo library, and historical
+backups made before the update are distinguished from automatic app storage.
+
+Versioned previously accepted Markdown and the older unversioned compatibility
+source texts remain unchanged. Historical HTML receives a link to the new version.
+Do not overwrite historical accepted documents. Verify the deployed pages,
+then install the additive `009_backup_policy_legal_version.sql` from CleoTrack,
+then distribute build 33. Existing consent must never be fabricated or upgraded.
+The app asks for fresh acceptance of 2026-10-04; the server preserves older-client
+compatibility while blocking revoked consent and pending deletions.
+
+The deployment commit, GitHub Pages result and live-page hashes for this update
+are recorded in CleoTrack/Release/legal-publication-2026-10-04.json after
+publication verification. Production migration 009 and app distribution are
+separate release steps; publishing these pages does not perform them.
+
+The record below describes the preceding verified live publication.
+
+---
+
 # Legal publication — 27 September 2026
 
 Current publication version: **2026-09-27**, DE/EN/ES privacy policy and terms.

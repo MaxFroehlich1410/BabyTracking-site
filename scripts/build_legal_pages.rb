@@ -181,32 +181,40 @@ def page_html(page, body)
   HTML
 end
 
-CURRENT_VERSION = "2026-09-27"
+CURRENT_VERSION = "2026-10-04"
 VERSION_LABELS = {
-  "de" => "Diese Fassung bleibt für ältere App-Versionen verfügbar. Die aktuelle Datenschutzerklärung und die aktuellen Nutzungsbedingungen vom 27. September 2026 berücksichtigen die Serversicherung in Deutschland und das lokale Fortfahren. Zur aktuellen Fassung",
-  "en" => "This version remains available for older app releases. The current privacy policy and terms dated September 27, 2026 describe server backups in Germany and continuing locally. Read the current version",
-  "es" => "Esta versión sigue disponible para versiones anteriores de la app. La política y los términos actuales del 27 de septiembre de 2026 describen las copias en Alemania y la continuación en modo local. Ver la versión actual"
+  "de" => "Diese Fassung bleibt für ältere App-Versionen verfügbar. Die aktuelle Datenschutzerklärung und die aktuellen Nutzungsbedingungen vom 4. Oktober 2026 beschreiben den Ausschluss lokaler sensibler Daten aus Gerätesicherungen und die Serversicherung ohne iCloud. Zur aktuellen Fassung",
+  "en" => "This version remains available for older app releases. The current privacy policy and terms dated October 4, 2026 describe exclusion of sensitive local data from device backups and server backups without iCloud. Read the current version",
+  "es" => "Esta versión sigue disponible para versiones anteriores de la app. La política y los términos actuales del 4 de octubre de 2026 describen la exclusión de datos locales sensibles de las copias del dispositivo y las copias del servidor sin iCloud. Ver la versión actual"
 }.freeze
 
 PAGES.each do |original|
-  [nil, "2026-09-12", CURRENT_VERSION].each do |version|
+  [nil, "2026-09-12", "2026-09-27", CURRENT_VERSION].each do |version|
     page = original.dup
     if version
       page[:source] = "versions/#{version}/#{original[:source]}"
       page[:output] = "versions/#{version}/#{original[:output]}"
       page[:version] = version
     end
-    if version == CURRENT_VERSION
+    if version && version >= "2026-09-27"
       page[:title] = page[:title].gsub("BabyTrack", "BabyTracking")
       page[:description] = page[:description].gsub("BabyTrack", "BabyTracking")
-    else
+    end
+    if version != CURRENT_VERSION
       destination = "#{relative_prefix(page[:output])}versions/#{CURRENT_VERSION}/#{original[:output].delete_suffix('index.html')}"
       page[:notice] = %(<aside class="version-notice"><p><a href="#{destination}">#{CGI.escapeHTML(VERSION_LABELS[page[:lang]])}</a></p></aside>)
     end
     source = File.read(File.join(ROOT, page[:source]), encoding: "UTF-8")
+    # Historical Spanish sources linked to a version directory with no landing
+    # page. Repair only this site-home hyperlink in generated HTML; keep the
+    # accepted Markdown and its substantive legal text unchanged.
+    if version
+      source = source.gsub("https://maxfroehlich1410.github.io/BabyTracking-site/versions/#{version}/)",
+                           "https://maxfroehlich1410.github.io/BabyTracking-site/)")
+    end
     output = File.join(ROOT, page[:output])
     FileUtils.mkdir_p(File.dirname(output))
-    File.write(output, page_html(page, render_markdown(source)), encoding: "UTF-8")
+    File.write(output, page_html(page, render_markdown(source)).gsub(/[ \t]+$/, ""), encoding: "UTF-8")
   end
 end
 
@@ -226,4 +234,4 @@ end
   HTML
 end
 
-puts "Generated #{PAGES.length * 3} versioned and compatibility legal pages and 2 compatibility redirects."
+puts "Generated #{PAGES.length * 4} versioned and compatibility legal pages and 2 compatibility redirects."

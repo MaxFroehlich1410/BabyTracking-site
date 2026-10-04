@@ -111,10 +111,12 @@ The following placeholders must be reviewed and filled in manually:
 - [ ] Review all legal content for accuracy with a legal professional before going live
 
 
-## Current publication — 27 September 2026
+## Prepared update — 4 October 2026
 
-The current six documents live under `versions/2026-09-27/`; edit those sources
-before publication and run `ruby scripts/build_legal_pages.rb`. Once a version
-has been accepted by users, create a new dated version instead of overwriting it.
+The six updated documents for build 33 are prepared under `versions/2026-10-04/`.
+Run `ruby scripts/build_legal_pages.rb` after editing them and before publication.
+Accepted versioned Markdown sources for 2026-09-12 and 2026-09-27 remain unchanged.
 Root Markdown sources and legacy routes preserve version 2026-09-12 for older
-app builds. The home page points to the current version. See PUBLICATION_STATUS.md.
+app builds, with a visible link to the updated documents. The home page points to
+the prepared version. Publication and additive consent migration 009 must precede
+distribution of build 33. See PUBLICATION_STATUS.md.
